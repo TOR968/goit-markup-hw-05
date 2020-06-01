@@ -53,6 +53,16 @@ a {
 .current {
   color: var(--accent-color);
 }
+.current::after{
+  content:"";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--accent-color);
+}
 /*  */
 .container {
   margin-left: auto;
@@ -69,6 +79,7 @@ a {
   margin-left: 50px;
 }
 .site-nav .item {
+  position: relative;
   padding-top: 32px;
   padding-bottom: 32px;
 }
@@ -239,6 +250,9 @@ h1 {
 .propose .item + .item {
   margin-left: 30px;
 }
+.propose a{
+  position: relative;
+}
 .propose img,
 .propose a {
   display: block;
@@ -258,6 +272,10 @@ h1 {
 }
 .propose-main h3 {
   margin: 0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
   padding: 27px;
   color: var(--primary-white-color);
   background-color: rgba(47, 48, 58, 0.8);
@@ -539,12 +557,12 @@ footer p {
   box-sizing: border-box;
   border-radius: 5px;
 }
-.card-img {
-  width: 370px;
+
+.card-img{
+  position: relative;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
-
 .card-content {
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
@@ -564,10 +582,6 @@ footer p {
   0px 1px 1px rgba(0, 0, 0, 0.12);
   
 }
-.project img :hover,
-.project img :focus {
-  background: rgba(33, 150, 243, 0.9);
-}
 .project h3 {
   margin: 0;
   padding: 20px 24px 4px;
@@ -577,17 +591,43 @@ footer p {
   line-height: 2;
   letter-spacing: 0.06em;
 }
-.project p {
+.type-card {
   margin: 0;
   padding: 0px 24px 20px;
   color: var(--primary-text-color);
   font-size: 16px;
   line-height: 1.87;
 }
-.project span {
+.card-img::before{
+  display: inline-block;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
+  opacity: 0;
+}
+.is-hover {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%; 
   font-size: 18px;
   line-height: 1.55;
+  letter-spacing: 0.03em;
+  color: var(--primary-white-color);
+  padding: 63px 24px;
+  margin: 0;
+  opacity: 0;
 }
+.is-hover:hover,
+.card-img:hover::before{
+  opacity: 1;
+}
+
 .project a,
 .project img {
   display: block;
