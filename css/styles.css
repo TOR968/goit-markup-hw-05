@@ -380,7 +380,8 @@ h1 {
 .img-client:hover,
 .img-client:focus{
   border: 1px solid var(--accent-color);
-  --color4: var(--accent-color);
+  --color4: var(--accent-color); 
+  /* transition: 2500ms; */
 }
 .img-client {
   display: flex;
@@ -392,8 +393,8 @@ h1 {
   /* --color4:  ; */
   border: 1px solid #afb1b8;
   border-radius: 4px;
-  transition: border 250ms var(--animation),
-  --color4 2500ms var(--animation) ; 
+  transition: border 250ms var(--animation);
+  /*  --color4 250ms var(--animation) ;  */
 }
 .company {
   padding-top: 94px;
