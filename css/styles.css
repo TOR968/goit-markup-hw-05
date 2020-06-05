@@ -27,6 +27,9 @@ html {
   --second-background: #f5f4fa;
   --footer-background: #2f303a;
   --animation: cubic-bezier(0.4, 0, 0.2, 1);
+  --svg4: #afb1b8;
+  --color4: currentColor;
+  --color5: currentColor;
 }
 
 /* background-color */
@@ -122,8 +125,7 @@ header {
 }
 nav a {
   color: var(--title-text-color);
-  transition: color 250ms var(--animation),
-  --color5 250ms var(--animation);
+  transition: color 250ms var(--animation)
 }
 nav span {
   color: var(--accent-color);
@@ -132,8 +134,6 @@ nav span {
 nav .list :hover,
 nav .list :focus {
   color: var(--accent-color);
-  --color5: var(--accent-color);
-  
 }
 /*  */
 .hero {
@@ -355,15 +355,16 @@ h1 {
   justify-content: center;
   width: 44px;
   height: 44px;
+  color: var(--svg4);
   border-radius: 50%;
-  transition: background-color 250ms var(--animation);
-  /* --color4 250ms var(--animation); */
+  transition: background-color 250ms var(--animation),
+  color 250ms var(--animation);
   }
 .img-social:hover,
 .img-social:focus{
   border-radius: 50%;
   background-color: var(--accent-color);
-  --color4: var(--primary-white-color);
+  color: var(--primary-white-color);
 }
 .icon-social{
   width: 20px;
@@ -380,8 +381,7 @@ h1 {
 .img-client:hover,
 .img-client:focus{
   border: 1px solid var(--accent-color);
-  --color4: var(--accent-color); 
-  /* transition: 2500ms; */
+  color: var(--accent-color); 
 }
 .img-client {
   display: flex;
@@ -389,12 +389,11 @@ h1 {
   justify-content: center;
   width: 170px;
   height: 90px;
-  /* fill:#afb1b8; */
-  /* --color4:  ; */
+  color: var(--svg4);
   border: 1px solid #afb1b8;
   border-radius: 4px;
-  transition: border 250ms var(--animation);
-  /*  --color4 250ms var(--animation) ;  */
+  transition: border 250ms var(--animation),
+  color 250ms var(--animation) ; 
 }
 .company {
   padding-top: 94px;
