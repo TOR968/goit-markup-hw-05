@@ -16,6 +16,7 @@ html {
 /* фон  #E5E5E5*/
 /* фон 2 #f5f4fa */
 /* фон подвал #2f303a */
+/* колір svg #afb1b8*/
 
 :root {
   --primary-text-color: #757575;
@@ -641,10 +642,10 @@ footer p {
  transition: transform 250ms var(--animation),
  opacity 250ms var(--animation);
 }
-.project .item:hover .card-img-text,
-.project .item:hover ::before,
-.project .item:focus .card-img-text,
-.project .item:focus ::before{
+.project a:hover .card-img-text,
+.project a:hover ::before,
+.project a:focus .card-img-text,
+.project a:focus ::before{
   transform: translateY(0);
   opacity: 1;
 }
