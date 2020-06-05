@@ -466,10 +466,12 @@ address {
   height: 44px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
-  transition: background-color 250ms var(--animation);
+  transition: background-color 250ms var(--animation),
+  border-radius 250ms;
 }
-.join .item-link:hover,
-.join .item-link:focus {
+.join .img-join:hover,
+.join .img-join:focus {
+  border-radius: 50%;
   background-color: var(--accent-color);
 }
 .img-join {
