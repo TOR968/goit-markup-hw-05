@@ -464,10 +464,6 @@ address {
   display: inline-block;
   width: 44px;
   height: 44px;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.1);
-  transition: background-color 250ms var(--animation),
-  border-radius 250ms;
 }
 .join .img-join:hover,
 .join .img-join:focus {
@@ -480,6 +476,9 @@ address {
   justify-content: center;
   width: 44px;
   height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 2500ms var(--animation);
 }
 .icon-join {
   width: 20px;
