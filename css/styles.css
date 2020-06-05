@@ -26,6 +26,7 @@ html {
   --background: #ffffff;
   --second-background: #f5f4fa;
   --footer-background: #2f303a;
+  --animation: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* background-color */
@@ -121,6 +122,8 @@ header {
 }
 nav a {
   color: var(--title-text-color);
+  transition: color 250ms var(--animation),
+  --color5 250ms var(--animation);
 }
 nav span {
   color: var(--accent-color);
@@ -130,6 +133,7 @@ nav .list :hover,
 nav .list :focus {
   color: var(--accent-color);
   --color5: var(--accent-color);
+  
 }
 /*  */
 .hero {
@@ -293,7 +297,7 @@ h1 {
 }
 .us .item {
   width: 270px;
-  /* overflow: hidden; */
+  overflow: hidden;
   background-color: var(--primary-white-color);
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 1px 3px rgba(0, 0, 0, 0.12);
@@ -351,6 +355,9 @@ h1 {
   justify-content: center;
   width: 44px;
   height: 44px;
+  border-radius: 50%;
+  transition: background-color 250ms var(--animation);
+  /* --color4 250ms var(--animation); */
   }
 .img-social:hover,
 .img-social:focus{
@@ -367,10 +374,6 @@ h1 {
   display: flex;
   justify-content: center;
 }
-.client .item {
-  border: 1px solid #afb1b8;
-  border-radius: 4px;
-}
 .client .item + .item {
   margin-left: 30px;
 }
@@ -385,6 +388,11 @@ h1 {
   justify-content: center;
   width: 170px;
   height: 90px;
+  /* --color4:  ; */
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  transition: border 250ms var(--animation);
+   /* --color4 2500ms var(--animation) ; */
 }
 .company {
   padding-top: 94px;
@@ -456,6 +464,7 @@ address {
   height: 44px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 250ms var(--animation);
 }
 .join .item-link:hover,
 .join .item-link:focus {
@@ -533,6 +542,8 @@ footer p {
   padding: 6px 22px;
   background-color: var(--second-background);
   border-radius: 4px;
+  transition: background-color 250ms var(--animation),
+  color 250ms var(--animation), box-shadow 250ms var(--animation) ;
 }
 .menu button:hover,
 .menu button:focus {
@@ -549,7 +560,6 @@ footer p {
 .project .item {
   display: block;
   width: 370px;
-  /* overflow: hidden; */
   margin-right: 30px;
   margin-bottom: 30px;
   background: var(--primary-white-color);
@@ -576,6 +586,9 @@ footer p {
 .project {
   padding-bottom: 94px;
 }
+.project .item{
+  transition: box-shadow 250ms var(--animation);
+}
 .project .item:hover,
 .project .item:focus{
   box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
@@ -597,40 +610,43 @@ footer p {
   font-size: 16px;
   line-height: 1.87;
 }
+.card-img{
+  overflow: hidden;
+}
 .card-img::before{
   display: inline-block;
   content: "";
   position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
   background-color: rgba(33, 150, 243, 0.9);
-  opacity: 0;
 }
-.is-hover {
+.card-img-text {
+  display: inline-block;
   position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%; 
   font-size: 18px;
   line-height: 1.55;
   letter-spacing: 0.03em;
   color: var(--primary-white-color);
   padding: 63px 24px;
   margin: 0;
+}
+.card-img::before,
+.card-img-text{
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%; 
   opacity: 0;
+  transform: translateY(100%);
+ transition: transform 250ms var(--animation),
+ opacity 250ms var(--animation);
 }
-.is-hover:hover,
-.card-img:hover::before{
+.project .item:hover .card-img-text,
+.project .item:hover ::before,
+.project .item:focus .card-img-text,
+.project .item:focus ::before{
+  transform: translateY(0);
   opacity: 1;
 }
-.is-hover:focus,
-.card-img:focus::before{
-  opacity: 1;
-}
-
 .project a,
 .project img {
   display: block;
