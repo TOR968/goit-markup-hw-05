@@ -388,11 +388,12 @@ h1 {
   justify-content: center;
   width: 170px;
   height: 90px;
+  /* fill:#afb1b8; */
   /* --color4:  ; */
   border: 1px solid #afb1b8;
   border-radius: 4px;
-  transition: border 250ms var(--animation);
-   /* --color4 2500ms var(--animation) ; */
+  transition: border 250ms var(--animation),
+  --color4 2500ms var(--animation) ; 
 }
 .company {
   padding-top: 94px;
