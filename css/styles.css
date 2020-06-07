@@ -132,8 +132,10 @@ nav span {
   color: var(--accent-color);
 }
 /*  */
-nav .list :hover,
-nav .list :focus {
+.site-nav a:hover,
+.site-nav a:focus,
+.adres-nav a:hover,
+.adres-nav a:focus{
   color: var(--accent-color);
 }
 /*  */
@@ -363,7 +365,6 @@ h1 {
   }
 .img-social:hover,
 .img-social:focus{
-  border-radius: 50%;
   background-color: var(--accent-color);
   color: var(--primary-white-color);
 }
@@ -467,7 +468,6 @@ address {
 }
 .join .img-join:hover,
 .join .img-join:focus {
-  border-radius: 50%;
   background-color: var(--accent-color);
 }
 .img-join {
